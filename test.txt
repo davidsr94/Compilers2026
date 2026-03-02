@@ -1,0 +1,92 @@
+{
+  int x
+  x = 1
+  {
+    int x
+    x = 2
+    print(x)
+  }
+  print(x)
+}$
+{
+    int a
+    string b
+    b = "bee"
+    {
+        int b
+        b = 1
+        a = b
+        print(b)
+        print(a)
+    }
+    print(b)
+}$
+{
+  int val
+  val = 1
+  {
+    int val
+    val = 2
+    {
+      int val
+      val = 3
+      print(val)
+    }
+    print(val)
+  }
+  print(val)
+}$
+{
+  int x
+  x = 10
+  {
+    print(x)
+  }
+}$
+{
+  int a
+  a = 42
+  string b
+  b = "unused"
+  print(a)
+}$
+{
+    int a
+    a = 1
+    {
+        string a
+        a = "a"
+        print(a)
+    }
+    string b
+    b = "b"
+    if (a == 1){
+        print(b)
+    }
+}$
+{
+    int a
+    a = 1
+    {
+        int a
+        a = 2
+        print(a)
+    }
+    string b
+    b = "alan"
+    if(a==1){
+        print(b)
+    }
+    string c
+    c = "james"
+    b = "blackstone"
+    print(b)
+}$
+
+{/* almost every token */ ()
+print=whileif"intstring"
+intstringbooleanfalse
+true
+==!=+ a 0123456789}$
+
+{print("No Caps Mister Bond")}$
