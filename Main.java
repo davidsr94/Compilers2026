@@ -47,6 +47,15 @@ public class Main {
             Lexer lexer = new Lexer(program, programCounter);
             List<Token> tokens = lexer.tokenize();
 
+            if (lexer.getErrorCount() > 0) {
+                System.out.println(
+                        "ERROR: Lexing failed for Program " + programCounter + ". Parsing aborted for this program.\n");
+            } else {
+                System.out.println("PARSER: Parsing program " + programCounter + "...");
+                Parser parser = new Parser(tokens, programCounter);
+                parser.parse();
+            }
+
             programCounter++;
             currentPos = eopIndex + 1;
 
