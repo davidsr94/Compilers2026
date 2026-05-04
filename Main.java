@@ -1,6 +1,6 @@
 /*README:
  * in order to compile:
- *      Javac Main.java Lexer.java Token.java Parser.java
+ *      Javac Main.java Lexer.java Token.java Parser.java SematicAnalyzer.java CodeGenerator.java ASTBuilder.java
  * in order to execute text file:
  *      java Main test.txt(any .txt)
  *
@@ -55,6 +55,18 @@ public class Main {
                 Parser parser = new Parser(tokens, programCounter);
                 parser.parse();
             }
+
+            System.out.println("AST for program " + programCounter + "...");
+            ASTBuilder astBuilder = new ASTBuilder(tokens, programCounter);
+            ASTNode ast = astBuilder.buildAST();
+            ast.print("");
+
+            SemanticAnalyzer analyzer = new SemanticAnalyzer(ast, programCounter);
+            analyzer.analyze();
+
+            CodeGenerator generator = new CodeGenerator(ast, programCounter);
+            generator.generate();
+
 
             programCounter++;
             currentPos = eopIndex + 1;

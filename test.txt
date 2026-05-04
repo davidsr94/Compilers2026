@@ -21,49 +21,7 @@
     }
     print(b)
 }$
-{
-  int val
-  val = 1
-  {
-    int val
-    val = 2
-    {
-      int val
-      val = 3
-      print(val)
-    }
-    print(val)
-  }
-  print(val)
-}$
-{
-  int x
-  x = 10
-  {
-    print(x)
-  }
-}$
-{
-  int a
-  a = 42
-  string b
-  b = "unused"
-  print(a)
-}$
-{
-    int a
-    a = 1
-    {
-        string a
-        a = "a"
-        print(a)
-    }
-    string b
-    b = "b"
-    if (a == 1){
-        print(b)
-    }
-}$
+
 {
     int a
     a = 1
@@ -82,17 +40,27 @@
     b = "blackstone"
     print(b)
 }$
-
-{/* almost every token */ ()
-print=whileif"intstring"
-intstringbooleanfalse
-true
-==!=+ a 0123456789}$
-
-{print("No Caps Mister Bond")}$
+{
+  int val
+  val = 1
+  {
+    int val
+    val = 2
+    {
+      int val
+      val = 3
+      print(val)
+    }
+    print(val)
+  }
+  print(val)
+}$
 
 {
-  int a
-  a = 1
-  print(a)
-}$
+ int a
+ a = 1
+ while (a != 5) {
+ a = 1 + a
+ print(a)
+ }
+} $
